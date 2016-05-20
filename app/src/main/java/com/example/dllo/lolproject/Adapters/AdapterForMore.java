@@ -1,11 +1,13 @@
 package com.example.dllo.lolproject.Adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.dllo.lolproject.R;
@@ -19,6 +21,12 @@ public class AdapterForMore extends  RecyclerView.Adapter<myViewHolder>{
 
     private Context context;
     private ArrayList datas;
+
+    //声明图片集合
+    private int[]pictures={R.mipmap.more1,R.mipmap.more2,R.mipmap.more3,R.mipmap.more4,R.mipmap.more5,R.mipmap.more6,R.mipmap.more7,R.mipmap.more8,R.mipmap.more9,R.mipmap.more10,R.mipmap.more11,R.mipmap.more12,R.mipmap.more13,R.mipmap.more14};
+
+    //声明more中的模块文字内容
+    String []moreTitles={"战绩查询","赛事","英雄榜","大神榜","精彩专栏","S6天赋模拟","符文模拟","召唤师技能","装备查询","铃声","壁纸","小说","商城","娱乐"};
 
 
     public AdapterForMore(Context context) {
@@ -49,12 +57,19 @@ public class AdapterForMore extends  RecyclerView.Adapter<myViewHolder>{
 
 
         //添加具体内容
-        holder.moreRecyclerView.setText("测试内容");
-        ViewGroup.LayoutParams params=holder.moreRecyclerView.getLayoutParams();
+        holder.moreTextView.setText(moreTitles[position]);
+        ViewGroup.LayoutParams params=holder.moreTextView.getLayoutParams();
 
-        
+        holder.moreRecyclerView.setImageResource(pictures[position]);
 
-        params.height=300;        holder.moreRecyclerView.setLayoutParams(params);
+
+
+
+
+        params.height=100;
+        params.width=100;
+        holder.moreRecyclerView.setLayoutParams(params);
+
 
 
 
@@ -68,9 +83,11 @@ public class AdapterForMore extends  RecyclerView.Adapter<myViewHolder>{
 
 class myViewHolder extends  RecyclerView.ViewHolder{
 
-    TextView moreRecyclerView;
+    ImageView moreRecyclerView;
+    TextView moreTextView;
     public myViewHolder(View itemView) {
         super(itemView);
-        moreRecyclerView= (TextView) itemView.findViewById(R.id.moreRecyclerView);
+        moreRecyclerView= (ImageView) itemView.findViewById(R.id.moreRecyclerView);
+        moreTextView= (TextView) itemView.findViewById(R.id.moreTextView);
     }
 }

@@ -45,7 +45,7 @@ public class MoreFragment extends Fragment{
         //添加数据
         datas=new ArrayList();
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 14; i++) {
             datas.add("模拟数据"+i);
         }
 
@@ -54,6 +54,8 @@ public class MoreFragment extends Fragment{
         moreRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL));
 
         moreRecyclerView.setAdapter(adapterForMore);
+
+
 
 
         return view;

@@ -8,7 +8,8 @@
         android:layout_height="0dp"
         android:layout_weight="0.8"
         android:orientation="horizontal"
-        android:weightSum="10">
+        android:weightSum="10"
+        android:background="#2f323a">
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"

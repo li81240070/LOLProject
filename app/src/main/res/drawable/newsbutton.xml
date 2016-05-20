@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--按钮被选中变色-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <item android:drawable="@drawable/newsbuttonno" android:state_selected="false"/>
+   <item android:drawable="@drawable/newsbuttonyes" android:state_selected="true"/>
+
+</selector>

@@ -1,11 +1,9 @@
 package com.example.dllo.lolproject;
 
-import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
 
 import com.example.dllo.lolproject.Adapters.AdapterForMainViewpager;
 import com.example.dllo.lolproject.Bean.MainActivityFragmentBean;
@@ -61,7 +59,12 @@ public class MainActivity extends AppCompatActivity {
         viewPagerForBigView.setAdapter(mainAdapter);
         //将Tablayout与滑动页面绑定
         tabLayoutForBigView.setupWithViewPager(viewPagerForBigView);
-
+        //设置Tablayout图标
+        tabLayoutForBigView.getTabAt(0).setIcon(R.drawable.newsbutton);
+        tabLayoutForBigView.getTabAt(1).setIcon(R.drawable.vediobutton);
+        tabLayoutForBigView.getTabAt(2).setIcon(R.drawable.herolistbutton);
+        tabLayoutForBigView.getTabAt(3).setIcon(R.drawable.communitybutton);
+        tabLayoutForBigView.getTabAt(4).setIcon(R.drawable.morebutton);
 
 
 
