@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -13,45 +12,48 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/vedioTitleButtonForLoad"
+            android:id="@+id/backButtonInLoadPage"
             android:background="@mipmap/ic_launcher"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="8"
-            android:id="@+id/newsTitleButtonForMessage"
-            android:text="游戏视频"
+            android:id="@+id/loadTextInLoadPage"
+            android:text="新闻资讯"
             android:gravity="center"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/vedioTitleButtonForsearch"
-            android:background="@mipmap/ic_launcher"
+            android:clickable="false"
             />
 
 
     </LinearLayout>
 
-
-    <android.support.design.widget.TabLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"
-        android:id="@+id/vedioTablayout">
+        android:layout_weight="11"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/nameEdittextInLoadpage"
+            android:hint="手机号/用户名/邮箱"
+            android:drawableLeft="@mipmap/ic_launcher"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/passwordEdittextInLoadpage"
+            android:hint="密码"
+            android:drawableLeft="@mipmap/ic_launcher"/>
 
+    </LinearLayout>
 
-    </android.support.design.widget.TabLayout>
-
-
-
-
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10.2"
-        android:id="@+id/vedioViewpager">
-
-    </android.support.v4.view.ViewPager>
 
 </LinearLayout>
