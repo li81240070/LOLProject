@@ -47,11 +47,12 @@
 
     </android.support.design.widget.TabLayout>
 
-    <TextView
+    <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:text="占位符" />
+        android:id="@+id/newsPicturesViewpager"
+        />
 
 
    <android.support.v4.view.ViewPager

@@ -48,21 +48,22 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:id="@+id/reallyPeopleShow"
-                android:background="@mipmap/ic_launcher"/>
+                android:background="@mipmap/community1"
+                android:layout_margin="5dp"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:id="@+id/showHowToPlay"
-                android:background="@mipmap/ic_launcher"
-                android:layout_marginTop="10dp"/>
+                android:background="@mipmap/community2"
+                android:layout_margin="5dp"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:id="@+id/findFriend"
-                android:background="@mipmap/ic_launcher"
-                android:layout_marginTop="10dp"/>
+                android:background="@mipmap/community3"
+                android:layout_margin="5dp"/>
 
         </LinearLayout>
 
