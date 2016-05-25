@@ -1,8 +1,7 @@
-package com.example.dllo.lolproject.Fragment;
+package com.example.dllo.lolproject.fragments;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -11,17 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.dllo.lolproject.Adapters.AdapterForNews;
-import com.example.dllo.lolproject.Adapters.AdapterForNewsPicture;
-import com.example.dllo.lolproject.Fragment.NewsFragments.GameMatchNewsFragment;
-import com.example.dllo.lolproject.Fragment.NewsFragments.HappyNewsFragment;
-import com.example.dllo.lolproject.Fragment.NewsFragments.NewNewsFragment;
-import com.example.dllo.lolproject.Fragment.NewsFragments.ReportNewsFragment;
+import com.example.dllo.lolproject.adapters.AdapterForNews;
+import com.example.dllo.lolproject.adapters.AdapterForNewsPicture;
+import com.example.dllo.lolproject.fragments.newsfragments.GameMatchNewsFragment;
+import com.example.dllo.lolproject.fragments.newsfragments.HappyNewsFragment;
+import com.example.dllo.lolproject.fragments.newsfragments.NewNewsFragment;
+import com.example.dllo.lolproject.fragments.newsfragments.ReportNewsFragment;
 import com.example.dllo.lolproject.R;
 
 import java.util.ArrayList;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
 /**
  * Created by dllo on 16/5/19.
@@ -43,6 +40,8 @@ public class NewsFragment extends Fragment {
     private CountDownTimer timer;
     //声明信使
     public android.os.Handler handler;
+    //声明结果变量(获取网络数据)
+    private String result;
 
     @Nullable
     @Override
@@ -94,8 +93,12 @@ public class NewsFragment extends Fragment {
 
 
 
+
+
         return view;
     }
+
+
 
 
 

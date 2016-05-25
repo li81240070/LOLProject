@@ -1,4 +1,4 @@
-package com.example.dllo.lolproject.Adapters;
+package com.example.dllo.lolproject.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

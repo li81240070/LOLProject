@@ -1,4 +1,4 @@
-package com.example.dllo.lolproject.HeroListFragments;
+package com.example.dllo.lolproject.heroListfragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

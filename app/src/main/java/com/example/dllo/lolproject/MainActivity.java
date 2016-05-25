@@ -5,13 +5,15 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.dllo.lolproject.Adapters.AdapterForMainViewpager;
-import com.example.dllo.lolproject.Bean.MainActivityFragmentBean;
-import com.example.dllo.lolproject.Fragment.CommunityFragment;
-import com.example.dllo.lolproject.Fragment.HeroListFragment;
-import com.example.dllo.lolproject.Fragment.MoreFragment;
-import com.example.dllo.lolproject.Fragment.NewsFragment;
-import com.example.dllo.lolproject.Fragment.VedioFragment;
+import com.example.dllo.lolproject.adapters.AdapterForMainViewpager;
+import com.example.dllo.lolproject.bean.MainActivityFragmentBean;
+import com.example.dllo.lolproject.bean.NewNewsJsonBeans;
+import com.example.dllo.lolproject.fragments.CommunityFragment;
+import com.example.dllo.lolproject.fragments.HeroListFragment;
+import com.example.dllo.lolproject.fragments.MoreFragment;
+import com.example.dllo.lolproject.fragments.NewsFragment;
+import com.example.dllo.lolproject.fragments.VedioFragment;
+
 
 import java.util.ArrayList;
 
@@ -31,11 +33,18 @@ public class MainActivity extends AppCompatActivity {
     //声明mainactivity中所拥有的fragment
     private MainActivityFragmentBean mainActivityFragmentBean;
 
+    //声明实体类集合
+    private ArrayList<NewNewsJsonBeans>data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+
+
+
         //绑定布局中的按钮
         tabLayoutForBigView= (TabLayout) findViewById(R.id.mainTablayout);
         viewPagerForBigView= (ViewPager) findViewById(R.id.mainViewpager);
@@ -68,8 +77,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
     }
+
+
+
+
 }
+

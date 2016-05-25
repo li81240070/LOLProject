@@ -1,16 +1,15 @@
-package com.example.dllo.lolproject.Fragment;
+package com.example.dllo.lolproject.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.dllo.lolproject.Adapters.AdapterForMore;
+import com.example.dllo.lolproject.adapters.AdapterForMore;
 import com.example.dllo.lolproject.R;
 
 import java.util.ArrayList;
@@ -54,6 +53,9 @@ public class MoreFragment extends Fragment{
         moreRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL));
 
         moreRecyclerView.setAdapter(adapterForMore);
+
+
+
 
 
 

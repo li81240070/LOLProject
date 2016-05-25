@@ -1,4 +1,4 @@
-package com.example.dllo.lolproject.Fragment;
+package com.example.dllo.lolproject.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,10 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.dllo.lolproject.Adapters.AdapterForVedio;
-import com.example.dllo.lolproject.Fragment.VedioFragments.CommentateVedioFragment;
-import com.example.dllo.lolproject.Fragment.VedioFragments.GamematchVedioFragment;
-import com.example.dllo.lolproject.Fragment.VedioFragments.HappyVedioFragment;
+import com.example.dllo.lolproject.adapters.AdapterForVedio;
+import com.example.dllo.lolproject.fragments.vediofragments.CommentateVedioFragment;
+import com.example.dllo.lolproject.fragments.vediofragments.GamematchVedioFragment;
+import com.example.dllo.lolproject.fragments.vediofragments.HappyVedioFragment;
 import com.example.dllo.lolproject.R;
 
 import java.util.ArrayList;

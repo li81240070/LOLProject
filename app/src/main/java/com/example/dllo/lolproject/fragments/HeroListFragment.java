@@ -1,4 +1,4 @@
-package com.example.dllo.lolproject.Fragment;
+package com.example.dllo.lolproject.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,10 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.dllo.lolproject.Adapters.AdapterForHerolist;
-import com.example.dllo.lolproject.HeroListFragments.HeroListAllHeroFragment;
-import com.example.dllo.lolproject.HeroListFragments.HeroListMyHeroFragment;
-import com.example.dllo.lolproject.HeroListFragments.HeroListWeekFreeFragment;
+import com.example.dllo.lolproject.adapters.AdapterForHerolist;
+import com.example.dllo.lolproject.heroListfragments.HeroListAllHeroFragment;
+import com.example.dllo.lolproject.heroListfragments.HeroListMyHeroFragment;
+import com.example.dllo.lolproject.heroListfragments.HeroListWeekFreeFragment;
 import com.example.dllo.lolproject.R;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.dllo.lolproject.Bean;
+package com.example.dllo.lolproject.bean;
 
 import android.support.v4.app.Fragment;
 

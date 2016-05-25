@@ -1,4 +1,4 @@
-package com.example.dllo.lolproject.Fragment.NewsFragments;
+package com.example.dllo.lolproject.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,12 +12,15 @@ import com.example.dllo.lolproject.R;
 /**
  * Created by dllo on 16/5/19.
  */
-public class HappyNewsFragment extends Fragment{
+
+//社区fragment页面
+
+public class CommunityFragment extends Fragment{
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.happynewspage,container,false);
+        View view=inflater.inflate(R.layout.communitybiggestpage,container,false);
         return  view;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.dllo.lolproject.Fragment.NewsFragments;
+package com.example.dllo.lolproject.fragments.vediofragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,12 +12,12 @@ import com.example.dllo.lolproject.R;
 /**
  * Created by dllo on 16/5/19.
  */
-public class ReportNewsFragment extends Fragment{
+public class GamematchVedioFragment extends Fragment{
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.reportnewspage,container,false);
+        View view=inflater.inflate(R.layout.vediogamematchpage,container,false);
         return  view;
     }
 }
