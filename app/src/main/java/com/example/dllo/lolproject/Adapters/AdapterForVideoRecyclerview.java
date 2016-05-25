@@ -1,6 +1,7 @@
 package com.example.dllo.lolproject.adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,48 +9,73 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.dllo.lolproject.bean.VideoBeanForPic;
 import com.example.dllo.lolproject.bean.VideoRecyclerviewBean;
 import com.example.dllo.lolproject.R;
+import com.squareup.picasso.Picasso;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by dllo on 16/5/24.
  */
-public class AdapterForVideoRecyclerview extends RecyclerView.Adapter<myViewHolder>{
+public class AdapterForVideoRecyclerview extends RecyclerView.Adapter<AdapterForVideoRecyclerview.myViewHolder>{
         private Context context;
-    private ArrayList<VideoRecyclerviewBean>data;
+
+    List<VideoBeanForPic.DataBean.CatwordIdBean> data;
 
 
-    public AdapterForVideoRecyclerview(ArrayList<VideoRecyclerviewBean> data) {
-        this.data = data;
-    }
+
 
     @Override
-    public com.example.dllo.lolproject.adapters.myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AdapterForVideoRecyclerview.myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View itemView= LayoutInflater.from(context).inflate(R.layout.recyclerviewforvideopage,parent,false);
 
-        com.example.dllo.lolproject.adapters.myViewHolder holder=new com.example.dllo.lolproject.adapters.myViewHolder(itemView);
+
+        myViewHolder holder=new myViewHolder(itemView);
         return holder;
 
 
 
     }
 
+    @Subscribe
+    public void getInternetData(Bitmap bitmap){
+
+
+
+
+    }
+
     @Override
-    public void onBindViewHolder(com.example.dllo.lolproject.adapters.myViewHolder holder, int position) {
+    public void onBindViewHolder(AdapterForVideoRecyclerview.myViewHolder holder, int position) {
 
 
-        holder.moreRecyclerView.setImageBitmap(data.get(position).getPicBitmap());
-        holder.moreTextView.setText(data.get(position).getName());
+
+        Picasso.with(context).load(data.get(position).getPic_url()).into(holder.videoPciture);
+
+        holder.videoText.setText(data.get(position).getName());
+
+
+
+
 
 
     }
 
     @Override
     public int getItemCount() {
-        return data!=null&&data.size()>0?data.size():0;
+        return data!=null?data.size():0;
+    }
+
+    public void setData(List<VideoBeanForPic.DataBean.CatwordIdBean> data) {
+        this.data = data;
+        notifyDataSetChanged();
     }
 
     class myViewHolder extends RecyclerView.ViewHolder{
@@ -66,9 +92,7 @@ public class AdapterForVideoRecyclerview extends RecyclerView.Adapter<myViewHold
           }
       }
 
-    public void setData(ArrayList<VideoRecyclerviewBean> data) {
-        this.data = data;
-    }
+
 
     public AdapterForVideoRecyclerview(Context context) {
         this.context = context;

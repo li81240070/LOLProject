@@ -1,5 +1,7 @@
 package com.example.dllo.lolproject.interfaces;
 
+import android.graphics.Bitmap;
+
 import com.android.volley.VolleyError;
 import com.example.dllo.lolproject.bean.NewNewsJsonBeans;
 import com.example.dllo.lolproject.bean.VideoBeanForPic;
@@ -13,4 +15,6 @@ public interface GetNetDataPic {
     void  onSuccess(VideoBeanForPic videoBeanForPic);
 
     void onFailed(VolleyError error);
+
+
 }
