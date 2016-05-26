@@ -34,6 +34,7 @@ public class VolleyForPic {
 
 
 
+
                 getNetDataPic.onSuccess(videoBeanForPic);
 
 
