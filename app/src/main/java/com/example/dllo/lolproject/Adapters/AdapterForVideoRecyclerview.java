@@ -1,17 +1,24 @@
 package com.example.dllo.lolproject.adapters;
 
+import android.app.Activity;
+import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.dllo.lolproject.MainActivity;
 import com.example.dllo.lolproject.bean.VideoBeanForPic;
 import com.example.dllo.lolproject.bean.VideoRecyclerviewBean;
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.other;
+import com.example.dllo.lolproject.tools.MyAPP;
 import com.squareup.picasso.Picasso;
 
 import org.greenrobot.eventbus.EventBus;
@@ -53,7 +60,7 @@ public class AdapterForVideoRecyclerview extends RecyclerView.Adapter<AdapterFor
     }
 
     @Override
-    public void onBindViewHolder(AdapterForVideoRecyclerview.myViewHolder holder, int position) {
+    public void onBindViewHolder(AdapterForVideoRecyclerview.myViewHolder holder, final int position) {
 
 
 
@@ -61,6 +68,26 @@ public class AdapterForVideoRecyclerview extends RecyclerView.Adapter<AdapterFor
 
         holder.videoText.setText(data.get(position).getName());
 
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+               String videoUrlForName= data.get(position).getName();
+                String videoUrlForDesc= data.get(position).getDesc();
+                String videoUrlForPicture= data.get(position).getPic_url();
+                Intent intent=new Intent();
+                intent.putExtra("VideoUrlForName",videoUrlForName);
+                intent.putExtra("VideoUrlForDesc",videoUrlForDesc);
+                intent.putExtra("VideoUrlForPicture",videoUrlForPicture);
+                intent.setClass(context,other.class);
+                Log.i("kkkk",data.get(position).getName()+"**"+data.get(position).getDesc());
+                context.startActivity(intent);
+
+
+
+            }
+        });
 
 
 

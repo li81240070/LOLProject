@@ -44,11 +44,11 @@ public class WeekFreeFragment extends Fragment{
 
 
         thisWeekFreeRecyclerview= (RecyclerView) view.findViewById(R.id.thisWeekFreeRecyclerview);
-        nextWeekFreeRecyclerview= (RecyclerView) view.findViewById(R.id.nextWeekFreeRecyclerview);
+       // nextWeekFreeRecyclerview= (RecyclerView) view.findViewById(R.id.nextWeekFreeRecyclerview);
 
 
         adapter=new AdapterForWeekFree(getContext());
-        adapterForNextWeek=new AdapterForWeekFree(getContext());
+        //adapterForNextWeek=new AdapterForWeekFree(getContext());
 
         VolleyForHeroList volleyForHeroList=new VolleyForHeroList();
         volleyForHeroList.getrHeroList(NetDataAdress.AllHeroAdress, new HeroList() {
@@ -68,24 +68,24 @@ public class WeekFreeFragment extends Fragment{
                     }
                 }
 
-                //下周周免英雄导入
-                for (int i = 0; i < allHeroBean.getData().size(); i++) {
-
-
-                    if ((getSp.getString("next"+allHeroBean.getData().get(i).getRole_id(),"默认"))!="默认"){
-                        dataForNextWeek.add(allHeroBean.getData().get(i));
-                    }
-                }
+//                //下周周免英雄导入
+//                for (int i = 0; i < allHeroBean.getData().size(); i++) {
+//
+//
+//                    if ((getSp.getString("next"+allHeroBean.getData().get(i).getRole_id(),"默认"))!="默认"){
+//                        dataForNextWeek.add(allHeroBean.getData().get(i));
+//                    }
+//                }
 
 
 
 
                 adapter.setDatas(data);
-                adapterForNextWeek.setDatas(dataForNextWeek);
+               // adapterForNextWeek.setDatas(dataForNextWeek);
                 thisWeekFreeRecyclerview.setLayoutManager(new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL));
                 thisWeekFreeRecyclerview.setAdapter(adapter);
-                nextWeekFreeRecyclerview.setLayoutManager(new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL));
-                nextWeekFreeRecyclerview.setAdapter(adapterForNextWeek);
+               // nextWeekFreeRecyclerview.setLayoutManager(new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL));
+               // nextWeekFreeRecyclerview.setAdapter(adapterForNextWeek);
 
             }
 

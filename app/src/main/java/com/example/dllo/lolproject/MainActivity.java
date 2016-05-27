@@ -105,12 +105,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                for (int i = 0; i < weekFreeHeroList.getData().getNextperiod().size(); i++) {
-                    editor.putString("next"+weekFreeHeroList.getData().getNextperiod().get(i).getId(),"本周免费英雄"+i);
 
-
-                }
-                editor.commit();
+//                for (int i = 0; i < weekFreeHeroList.getData().getNextperiod().size(); i++) {
+//                    editor.putString("next"+weekFreeHeroList.getData().getNextperiod().get(i).getId(),"本周免费英雄"+i);
+//
+//
+//                }
+              editor.commit();
 
 
             }

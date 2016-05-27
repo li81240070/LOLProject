@@ -43,7 +43,7 @@ public class AdapterForNewNewsFragment extends BaseAdapter{
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return Long.parseLong(data.getData().get(position).getId());
     }
 
     @Override
@@ -62,6 +62,9 @@ public class AdapterForNewNewsFragment extends BaseAdapter{
 
         viewHolder.newNewsListviewTitle.setText(data.getData().get(position).getTitle());
         viewHolder.newNewsListviewDisc.setText(data.getData().get(position).getDesc());
+
+
+
 
     return convertView;
 

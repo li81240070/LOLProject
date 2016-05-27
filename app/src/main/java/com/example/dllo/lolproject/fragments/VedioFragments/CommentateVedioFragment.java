@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,7 @@ public class CommentateVedioFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.vediocommentatepage,container,false);
+        final View view=inflater.inflate(R.layout.vediocommentatepage,container,false);
 
         recyclerviewviewForVideocommentate= (RecyclerView) view.findViewById(R.id.recyclerviewviewForVideocommentate);
         adapter=new AdapterForVideoRecyclerview(getContext());
@@ -51,6 +52,8 @@ public class CommentateVedioFragment extends Fragment{
 
             }
         });
+
+
 
 
 
