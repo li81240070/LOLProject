@@ -21,11 +21,16 @@ import java.util.List;
  */
 public class AdapterForReallyPeopleShow extends BaseAdapter{
     private Context context;
-    private List<ReallyPeopleShowBean> data;
+    private List<ReallyPeopleShowBean.DataBean> data;
 
 
+    public void setData(List<ReallyPeopleShowBean.DataBean> data) {
+        this.data = data;
+    }
 
-
+    public AdapterForReallyPeopleShow(Context context) {
+        this.context = context;
+    }
 
     @Override
     public int getCount() {
@@ -56,12 +61,12 @@ public class AdapterForReallyPeopleShow extends BaseAdapter{
 
             viewHolder= (AdapterForReallyPeopleShow.viewHolder) convertView.getTag();
         }
-        viewHolder.reallyPeopleShowName.setText(data.get(0).getData().get(position).getSummoner());
-        viewHolder.reallyPeopleShowBB.setText(data.get(0).getData().get(position).getDesc());
-        viewHolder.reallyPeopleShowTime.setText(data.get(0).getData().get(position).getCreated());
-        viewHolder.reallyPeopleShowWhereAndWho.setText(data.get(0).getData().get(position).getArea()+data.get(0).getData().get(position).getNickname());
-        Picasso.with(context).load(data.get(0).getData().get(position).getPic_url()).into(viewHolder.reallyPeopleShowShowFace);
-        Picasso.with(context).load(data.get(0).getData().get(position).getPic_url_small()).into(viewHolder.reallyPeopleShowLittleFace);
+        viewHolder.reallyPeopleShowName.setText(data.get(position).getSummoner());
+        viewHolder.reallyPeopleShowBB.setText(data.get(position).getDesc());
+        viewHolder.reallyPeopleShowTime.setText(data.get(position).getCreated());
+        viewHolder.reallyPeopleShowWhereAndWho.setText(data.get(position).getArea()+data.get(position).getNickname());
+        Picasso.with(context).load(data.get(position).getPic_url()).into(viewHolder.reallyPeopleShowShowFace);
+        Picasso.with(context).load(data.get(position).getAvatar()).into(viewHolder.reallyPeopleShowLittleFace);
 
 
         return convertView;
@@ -78,7 +83,7 @@ public class AdapterForReallyPeopleShow extends BaseAdapter{
         public viewHolder(View itemView){
             reallyPeopleShowShowFace= (ImageView) itemView.findViewById(R.id.reallyPeopleShowShowFace);
             reallyPeopleShowLittleFace= (ImageView) itemView.findViewById(R.id.reallyPeopleShowLittleFace);
-            reallyPeopleShowName= (TextView) itemView.findViewById(R.id.reallyPeopleShowTime);
+            reallyPeopleShowName= (TextView) itemView.findViewById(R.id.reallyPeopleShowName);
             reallyPeopleShowTime= (TextView) itemView.findViewById(R.id.reallyPeopleShowTime);
             reallyPeopleShowWhereAndWho= (TextView) itemView.findViewById(R.id.reallyPeopleShowWhereAndWho);
             reallyPeopleShowBB= (TextView) itemView.findViewById(R.id.reallyPeopleShowBB);

@@ -24,6 +24,8 @@
         <activity android:name=".thesecondflor.WebviewForNews"/>
         <activity android:name=".thesecondflor.other"/>
         <activity android:name=".thesecondflor.VideoPlayer"/>
+        <activity android:name=".thesecondflor.ReallyPeopleShowActivity"/>
+        <activity android:name=".thesecondflor.ShowHowToPlayActivity"/>
     </application>
 
 </manifest>

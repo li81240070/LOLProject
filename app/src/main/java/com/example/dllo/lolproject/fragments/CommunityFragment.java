@@ -1,5 +1,6 @@
 package com.example.dllo.lolproject.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.thesecondflor.ReallyPeopleShowActivity;
+import com.example.dllo.lolproject.thesecondflor.ShowHowToPlayActivity;
 
 /**
  * Created by dllo on 16/5/19.
@@ -45,12 +48,19 @@ public class CommunityFragment extends Fragment implements View.OnClickListener 
             //真人秀跳转页面
             case R.id.reallyPeopleShow:
 
+                Intent intent=new Intent();
+                intent.setClass(getActivity(), ReallyPeopleShowActivity.class);
+                startActivity(intent);
+
 
 
                 break;
 
             //晒玩法跳转页面
             case R.id.showHowToPlay:
+                Intent intent1=new Intent();
+                intent1.setClass(getActivity(), ShowHowToPlayActivity.class);
+                startActivity(intent1);
 
 
 
