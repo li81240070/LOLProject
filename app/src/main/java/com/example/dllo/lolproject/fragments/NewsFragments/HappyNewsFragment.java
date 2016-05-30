@@ -12,7 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.volley.VolleyError;
-import com.example.dllo.lolproject.WebviewForNews;
+import com.example.dllo.lolproject.thesecondflor.WebviewForNews;
 import com.example.dllo.lolproject.adapters.AdapterForNewNewsFragment;
 import com.example.dllo.lolproject.bean.NewNewsJsonBeans;
 import com.example.dllo.lolproject.interfaces.InterfaceForGetNetData;

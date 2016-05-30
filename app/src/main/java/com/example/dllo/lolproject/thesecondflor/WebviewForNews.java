@@ -1,15 +1,15 @@
-package com.example.dllo.lolproject;
+package com.example.dllo.lolproject.thesecondflor;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
+
+import com.example.dllo.lolproject.R;
 
 /**
  * Created by dllo on 16/5/27.

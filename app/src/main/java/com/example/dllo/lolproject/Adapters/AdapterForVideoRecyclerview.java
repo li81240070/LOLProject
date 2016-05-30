@@ -1,7 +1,5 @@
 package com.example.dllo.lolproject.adapters;
 
-import android.app.Activity;
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -13,18 +11,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.dllo.lolproject.MainActivity;
 import com.example.dllo.lolproject.bean.VideoBeanForPic;
-import com.example.dllo.lolproject.bean.VideoRecyclerviewBean;
 import com.example.dllo.lolproject.R;
-import com.example.dllo.lolproject.other;
-import com.example.dllo.lolproject.tools.MyAPP;
+import com.example.dllo.lolproject.thesecondflor.other;
 import com.squareup.picasso.Picasso;
 
-import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -76,12 +69,14 @@ public class AdapterForVideoRecyclerview extends RecyclerView.Adapter<AdapterFor
                String videoUrlForName= data.get(position).getName();
                 String videoUrlForDesc= data.get(position).getDesc();
                 String videoUrlForPicture= data.get(position).getPic_url();
+                String videoId=data.get(position).getId();
                 Intent intent=new Intent();
                 intent.putExtra("VideoUrlForName",videoUrlForName);
                 intent.putExtra("VideoUrlForDesc",videoUrlForDesc);
                 intent.putExtra("VideoUrlForPicture",videoUrlForPicture);
+                intent.putExtra("VideoId",videoId);
                 intent.setClass(context,other.class);
-                Log.i("kkkk",data.get(position).getName()+"**"+data.get(position).getDesc());
+
                 context.startActivity(intent);
 
 

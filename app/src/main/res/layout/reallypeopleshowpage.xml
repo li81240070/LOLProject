@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:background="#2f323a">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/reallyPeopleshowForBack"
+            android:background="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:id="@+id/reallyPeopleshowForTitle"
+            android:text="真人秀"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/reallyPeopleshowForNone"
+            android:background="@mipmap/ic_launcher"
+            />
+        </LinearLayout>
+
+    <!--第二行的布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:background="#2f323a">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/reallyPeopleshowForSearchWhere"
+            android:text="全部大区"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:id="@+id/reallyPeopleshowForSearchDate"
+            android:text="最新"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/reallyPeopleshowForSearchSex"
+            android:text="性别"
+            />
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:id="@+id/reallyPeopleshowListView">
+
+    </ListView>
+
+
+
+</LinearLayout>

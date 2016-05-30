@@ -21,8 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WebviewForNews"/>
-        <activity android:name=".other"/>
+        <activity android:name=".thesecondflor.WebviewForNews"/>
+        <activity android:name=".thesecondflor.other"/>
+        <activity android:name=".thesecondflor.VideoPlayer"/>
     </application>
 
 </manifest>
