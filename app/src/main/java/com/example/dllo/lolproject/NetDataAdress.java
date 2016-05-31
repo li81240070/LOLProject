@@ -26,6 +26,8 @@ public  class NetDataAdress {
     public final  static  String ReallyPeopleShow="http://lol.zhangyoubao.com/apis/rest/UgcsService/getUserShows?area=&order_kind=0&sex=&page=1&i_=04%3Ae6%3A76%3A88%3A95%3A96&t_=1464227478475&p_=27770&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
     public final  static  String HowToPlayAdress="http://lol.zhangyoubao.com/apis/rest/PlaysService/userPlayList?order_kind=0&role_id=0&season=8&page=1&i_=04%3Ae6%3A76%3A88%3A95%3A96&t_=1464227682668&p_=10349&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1Host:%20lol.zhangyoubao.com";
 
+    //找朋友地址
+    public final  static  String FindFriendAdress="http://lol.zhangyoubao.com/apis/rest/UgcsService/getCompanions?userid=23372828&i_=04%253Ae6%253A76%253A88%253A95%253A96&t_=1464227902454&p_=9707&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
 
 
 

@@ -26,6 +26,8 @@
         <activity android:name=".thesecondflor.VideoPlayer"/>
         <activity android:name=".thesecondflor.ReallyPeopleShowActivity"/>
         <activity android:name=".thesecondflor.ShowHowToPlayActivity"/>
+        <activity android:name=".thesecondflor.FindFriendActivity"/>
+        <activity android:name=".thesecondflor.MoreViewActivity"/>
     </application>
 
 </manifest>

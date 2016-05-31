@@ -48,7 +48,6 @@ public class VedioFragment extends Fragment{
         //实例化fragment集合
         fragmentArraylist=new ArrayList();
         fragmentArraylist.add(new HappyVedioFragment());
-
         fragmentArraylist.add(new GamematchVedioFragment());
         fragmentArraylist.add(new CommentateVedioFragment());
 

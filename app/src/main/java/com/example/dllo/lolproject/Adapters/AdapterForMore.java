@@ -1,7 +1,9 @@
 package com.example.dllo.lolproject.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.thesecondflor.MoreViewActivity;
 
 import java.util.ArrayList;
 
@@ -51,12 +54,12 @@ public class AdapterForMore extends  RecyclerView.Adapter<myViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(myViewHolder holder, int position) {
+    public void onBindViewHolder(myViewHolder holder, final int position) {
 
 
         //添加具体内容
         holder.moreTextView.setText(moreTitles[position]);
-        ViewGroup.LayoutParams params=holder.moreTextView.getLayoutParams();
+        final ViewGroup.LayoutParams params=holder.moreTextView.getLayoutParams();
 
         holder.moreRecyclerView.setImageResource(pictures[position]);
 
@@ -67,6 +70,16 @@ public class AdapterForMore extends  RecyclerView.Adapter<myViewHolder>{
         params.height=100;
         params.width=100;
         holder.moreRecyclerView.setLayoutParams(params);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.putExtra("PassWord",position+"");
+                intent.setClass(context, MoreViewActivity.class);
+                context.startActivity(intent);
+            }
+        });
 
 
 

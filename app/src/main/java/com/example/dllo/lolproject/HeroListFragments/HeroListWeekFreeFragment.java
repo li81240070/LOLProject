@@ -46,7 +46,7 @@ public class HeroListWeekFreeFragment extends Fragment{
 
         adapter.setFragments(fragmentArrayList);
 
-        Log.i("yyy",adapter.toString());
+
 
         herolistWeekfreeForViewpager.setAdapter(adapter);
         herolistWeekfreeForTablayout.setupWithViewPager(herolistWeekfreeForViewpager);

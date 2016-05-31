@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.thesecondflor.FindFriendActivity;
 import com.example.dllo.lolproject.thesecondflor.ReallyPeopleShowActivity;
 import com.example.dllo.lolproject.thesecondflor.ShowHowToPlayActivity;
 
@@ -67,6 +68,9 @@ public class CommunityFragment extends Fragment implements View.OnClickListener 
                 break;
             //找战友跳转页面
             case R.id.findFriend:
+                Intent intent2=new Intent();
+                intent2.setClass(getActivity(), FindFriendActivity.class);
+                startActivity(intent2);
 
 
 
