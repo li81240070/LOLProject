@@ -14,7 +14,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/showHowToPlayBack"
-            android:background="@mipmap/ic_launcher"/>
+            android:background="@mipmap/backbutton"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"

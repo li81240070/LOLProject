@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:layout_height="wrap_content">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="20dp"
+
         android:text="2016-05-29星期日"
         android:id="@+id/sonMore2Date"
         android:gravity="center"
+        android:background="#2f323a"
+        android:textColor="#ffffff"
         >
 
     </TextView>
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:id="@+id/sonMore2Listview">
 
-    </ListView>
+        <com.example.dllo.lolproject.fragments.more2fragment.MyListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/sonMore2Listview">
+
+        </com.example.dllo.lolproject.fragments.more2fragment.MyListView>
+
+
+
+
 
 
 </LinearLayout>

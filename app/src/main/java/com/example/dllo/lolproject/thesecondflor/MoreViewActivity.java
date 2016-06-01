@@ -1,28 +1,16 @@
 package com.example.dllo.lolproject.thesecondflor;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
-import com.android.volley.VolleyError;
-import com.example.dllo.lolproject.NetDataAdress;
 import com.example.dllo.lolproject.R;
-import com.example.dllo.lolproject.bean.VideoBeanForPic;
-import com.example.dllo.lolproject.fragments.morefragment.More2ImportantNews;
-import com.example.dllo.lolproject.fragments.morefragment.More2MatchDate;
-import com.example.dllo.lolproject.interfaces.ForMore;
+import com.example.dllo.lolproject.fragments.more2fragment.More2ImportantNews;
+import com.example.dllo.lolproject.fragments.more2fragment.More2MatchDate;
 import com.example.dllo.lolproject.lazyman.AdapterForMoreFragment;
-import com.example.dllo.lolproject.lazyman.VolleyForMore;
-import com.example.dllo.lolproject.tools.MyAPP;
 
-import java.net.URL;
 import java.util.ArrayList;
 
 /**

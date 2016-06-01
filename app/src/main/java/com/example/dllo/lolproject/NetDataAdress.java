@@ -28,8 +28,10 @@ public  class NetDataAdress {
 
     //找朋友地址
     public final  static  String FindFriendAdress="http://lol.zhangyoubao.com/apis/rest/UgcsService/getCompanions?userid=23372828&i_=04%253Ae6%253A76%253A88%253A95%253A96&t_=1464227902454&p_=9707&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
-
-
+    //比赛日期地址
+    public final  static  String MatchDateAdress="http://lol.zhangyoubao.com/apis/rest/competitions/schedules?cid=0&i_=04%253Ae6%253A76%253A88%253A95%253A96&t_=1464228334861&p_=16928&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
+    //要闻接口地址
+    public final  static  String ImportantNewsAdress="http://lol.zhangyoubao.com/apis/rest/competitions/items?maxid=0&cid=&i_=04%253Ae6%253A76%253A88%253A95%253A96&t_=1464228519417&p_=30596&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
 
 
 }

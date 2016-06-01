@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="100dp">
+   android:layout_height="wrap_content"
+    android:background="#2f323a">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -13,14 +14,16 @@
             android:layout_weight="1"
             android:text="LPL2016夏季赛"
             android:id="@+id/grandsonMore2MatchName"
-            android:gravity="left"/>
+            android:gravity="left"
+            android:textColor="#ffffff"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="13:00"
             android:id="@+id/grandsonMore2MatchTime"
-            android:gravity="right"/>
+            android:gravity="right"
+            android:textColor="#ffffff"/>
 
     </LinearLayout>
     <LinearLayout
@@ -51,7 +54,8 @@
                     android:layout_weight="2"
                     android:text="SKT"
                     android:id="@+id/grandsonMore2Team1Name"
-                    android:gravity="left"/>
+                    android:gravity="left"
+                    android:textColor="#ffffff"/>
                 <!--队伍一得分-->
                 <TextView
                     android:layout_width="0dp"
@@ -59,7 +63,8 @@
                     android:layout_weight="2"
                     android:text="3"
                     android:id="@+id/grandsonMore2Team1Score"
-                    android:gravity="right"/>
+                    android:gravity="right"
+                    android:textColor="#ffffff"/>
             </LinearLayout>
 
             <LinearLayout
@@ -79,7 +84,8 @@
                     android:layout_weight="2"
                     android:text="SKT"
                     android:id="@+id/grandsonMore2Team2Name"
-                    android:gravity="left"/>
+                    android:gravity="left"
+                    android:textColor="#ffffff"/>
                 <!--队伍2得分-->
                 <TextView
                     android:layout_width="0dp"
@@ -87,14 +93,16 @@
                     android:layout_weight="2"
                     android:text="3"
                     android:id="@+id/grandsonMore2Team2Score"
-                    android:gravity="right"/>
+                    android:gravity="right"
+                    android:textColor="#ffffff"/>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="季中赛冠军淘汰赛,BO5"
-                android:id="@+id/grandsonMore2MatchStyle"/>
+                android:id="@+id/grandsonMore2MatchStyle"
+                android:textColor="#ffffff"/>
 
 
         </LinearLayout>
@@ -111,6 +119,7 @@
                 android:text="已结束"
                 android:id="@+id/grandsonMore2state"
                 android:gravity="center_horizontal"
+                android:textColor="#ffffff"
                 />
             <LinearLayout
                 android:layout_width="0dp"
@@ -129,11 +138,17 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:text="评论1358"
-                    android:id="@+id/grandsonMore2Comment"/>
+                    android:id="@+id/grandsonMore2Comment"
+                    android:textColor="#ffffff"/>
             </LinearLayout>
             
 
         </LinearLayout>
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#2f323a"/>
+
 
 </LinearLayout>
