@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/more6FragmentBackground1">
+
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView01"
+        android:background="@mipmap/ic_launcher"
+        android:layout_above="@+id/more6imageView506"
+        android:layout_alignStart="@+id/more6imageView303"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"
+        />
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView202"
+        android:background="@mipmap/ic_launcher"
+        android:layout_above="@+id/more6imageView607"
+        android:layout_toEndOf="@+id/more6imageView909"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView303"
+        android:background="@mipmap/ic_launcher"
+        android:layout_above="@+id/more6imageView808"
+        android:layout_toStartOf="@+id/more6imageView808"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView405"
+        android:background="@mipmap/ic_launcher"
+        android:layout_alignTop="@+id/more6imageView303"
+        android:layout_alignStart="@+id/more6imageView202"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView506"
+        android:background="@mipmap/ic_launcher"
+        android:layout_above="@+id/more6imageView303"
+        android:layout_alignStart="@+id/more6imageView01"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView607"
+        android:background="@mipmap/ic_launcher"
+        android:layout_above="@+id/more6imageView405"
+        android:layout_alignStart="@+id/more6imageView405"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView704"
+        android:background="@mipmap/ic_launcher"
+        android:layout_alignTop="@+id/more6imageView607"
+        android:layout_centerHorizontal="true"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView808"
+        android:background="@mipmap/ic_launcher"
+        android:layout_above="@+id/more6imageView1010"
+        android:layout_toStartOf="@+id/more6imageView13"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView909"
+        android:background="@mipmap/ic_launcher"
+        android:layout_alignTop="@+id/more6imageView808"
+        android:layout_toEndOf="@+id/more6imageView704"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView1010"
+        android:background="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/more6imageView808"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView1111"
+        android:background="@mipmap/ic_launcher"
+        android:layout_alignTop="@+id/more6imageView1010"
+        android:layout_alignStart="@+id/more6imageView14"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView12"
+        android:background="@mipmap/ic_launcher"
+        android:layout_below="@+id/more6imageView1010"
+        android:layout_alignStart="@+id/more6imageView1010"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView13"
+        android:background="@mipmap/ic_launcher"
+        android:layout_alignTop="@+id/more6imageView12"
+        android:layout_toStartOf="@+id/more6imageView909"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+    <TextView
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:id="@+id/more6imageView14"
+        android:background="@mipmap/ic_launcher"
+        android:layout_alignTop="@+id/more6imageView13"
+        android:layout_toEndOf="@+id/more6imageView909"
+        android:textColor="#16a3dc"
+        android:gravity="right|bottom"/>
+
+
+</RelativeLayout>

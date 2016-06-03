@@ -13,30 +13,29 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/more11BackButton"
+            android:id="@+id/more5IntnetBack"
             android:background="@mipmap/backbutton"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="8"
-            android:id="@+id/more11Title"
-            android:text="壁纸"
+            android:id="@+id/more5IntnetTitle"
+            android:text="精彩专栏"
             android:textColor="#ffffff"
             android:gravity="center"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/more11Changeaccount"
+            android:id="@+id/more5IntnetNoThing"
             android:background="#2f323a"
             />
-
-
     </LinearLayout>
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="12.2"
-        android:id="@+id/more11RecyclerView"></android.support.v7.widget.RecyclerView>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12.2"
+            android:id="@+id/more5IntentListView"></ListView>
+
 
 </LinearLayout>

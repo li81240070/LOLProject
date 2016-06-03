@@ -32,6 +32,21 @@ public  class NetDataAdress {
     public final  static  String MatchDateAdress="http://lol.zhangyoubao.com/apis/rest/competitions/schedules?cid=0&i_=04%253Ae6%253A76%253A88%253A95%253A96&t_=1464228334861&p_=16928&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
     //要闻接口地址
     public final  static  String ImportantNewsAdress="http://lol.zhangyoubao.com/apis/rest/competitions/items?maxid=0&cid=&i_=04%253Ae6%253A76%253A88%253A95%253A96&t_=1464228519417&p_=30596&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
+    //英雄榜接口
+    public final  static  String HeroCountAdress= "http://lol.zhangyoubao.com/apis/rest//RolesService/heroRanks?condition=0&page=1&position=0&i_=04%253Ae6%253A76%253A88%253A95%253A96&t_=1464228575995&p_=20330&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
+
+    //大神榜接口
+    public final  static  String BigGodAdress= "http://lol.service.zhangyoubao.com/service/rest?api=rank.getgodlist&game=lol&platformVersion=400801&modle_=N1";
+    //小说接口
+    public final  static  String NovelAdress="http://lol.zhangyoubao.com/apis/rest/CatalogsService/all?cattype=novel&i_=04%253Ae6%253A76%253A88%253A95%253A96&t_=1464835119927&p_=32126&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
+
+    //壁纸接口
+    public final  static  String WallpaperAdress="http://lol.zhangyoubao.com/apis/rest/AroundService/paper?size=1536&page=1&i_=04%3Ae6%3A76%3A88%3A95%3A96&t_=1464835077550&p_=24995&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
+    //铃声接口
+    public final  static  String MuscicAdress="http://lol.zhangyoubao.com/apis/rest/AroundService/ring?page=1&i_=04%253Ae6%253A76%253A88%253A95%253A96&t_=1464835043002&p_=11351&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
+    //精彩专栏接口
+    public final  static  String ColumnAdress="http://lol.zhangyoubao.com/apis/rest/TopicsService/all?page=1&i_=04%3Ae6%3A76%3A88%3A95%3A96&t_=1464834968838&p_=28859&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
+
 
 
 }
