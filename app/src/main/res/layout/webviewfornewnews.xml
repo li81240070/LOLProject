@@ -14,7 +14,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/backButtonInWebview"
-            android:background="@mipmap/backbutton"/>
+            android:background="@mipmap/newsback"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/moreButtonInWebview"
-            android:background="@mipmap/ic_launcher"
+            android:background="@mipmap/newsmore"
             />
 
 
@@ -50,36 +50,40 @@
         android:layout_weight="0.8"
         android:orientation="horizontal"
 
-        android:background="#2f323a">
+        android:background="#ececec">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="8"
+            android:layout_weight="2.5"
             android:id="@+id/writeSomethingInWebview"
             android:text="写点评论"
-            android:textColor="#ffffff"
+            android:background="#ececec"
             android:gravity="center"/>
-        <Button
+        <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:id="@+id/goodJobInWebview"
-        android:background="@mipmap/ic_launcher"
+            android:src="@mipmap/newsgood"
+            android:layout_margin="5dp"
         />
-        <Button
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/badJobInWebview"
-            android:background="@mipmap/ic_launcher"
+            android:src="@mipmap/newsbad"
+            android:layout_margin="5dp"
             />
-        <Button
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/commentJobInWebview"
-            android:background="@mipmap/ic_launcher"
+            android:src="@mipmap/newssay"
+            android:layout_margin="5dp"
+
             />
 
 

@@ -79,8 +79,7 @@ public class AdapterForWeekFree extends RecyclerView.Adapter<AdapterForWeekFree.
 
             imageViewWeekFree= (ImageView) itemView.findViewById(R.id.imageViewWeekFree);
             TextviewWeekFree= (TextView) itemView.findViewById(R.id.TextviewWeekFree);
-            dpsWeekFree= (TextView) itemView.findViewById(R.id.dpsWeekFree);
-            hpWeekFree= (TextView) itemView.findViewById(R.id.hpWeekFree);
+
         }
     }
 }

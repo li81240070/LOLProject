@@ -14,7 +14,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/reallyPeopleshowForBack"
-            android:background="@mipmap/backbutton"/>
+            android:background="@mipmap/newsback"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/reallyPeopleshowForNone"
-            android:background="@mipmap/ic_launcher"
+            android:background="#2f323a"
             />
         </LinearLayout>
 
@@ -43,13 +43,15 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:id="@+id/reallyPeopleshowForSearchWhere"
-            android:text="全部大区"/>
+            android:text="全部大区"
+            android:textColor="#ffffff"
+            android:background="#2f323a"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="8"
+            android:layout_weight="4"
             android:id="@+id/reallyPeopleshowForSearchDate"
             android:text="最新"
             android:textColor="#ffffff"
@@ -57,9 +59,11 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:id="@+id/reallyPeopleshowForSearchSex"
             android:text="性别"
+            android:textColor="#ffffff"
+            android:background="#2f323a"
             />
     </LinearLayout>
     <ListView

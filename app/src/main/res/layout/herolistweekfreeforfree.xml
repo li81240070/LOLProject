@@ -1,84 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:id="@+id/thisWeekFreeHeroWord"
-                    android:text="本周周免"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:id="@+id/thisWeekFreeHeroTime"
-                    android:text="(5/20-5/27"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:text="周免发布:周三下午"
-                    android:gravity="right"
-                    />
-            </LinearLayout>
+    android:layout_height="match_parent"
+   >
 
-            <android.support.v7.widget.RecyclerView
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="#ffffff"
+                >
+            <com.example.dllo.lolproject.fragments.vediofragments.herolist.MyRecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="11"
-                android:id="@+id/thisWeekFreeRecyclerview">
+                android:id="@+id/thisWeekFreeRecyclerview"
 
-            </android.support.v7.widget.RecyclerView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:id="@+id/nextWeekFreeHeroWord"
-                    android:text="下周周免"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:id="@+id/nextWeekFreeHeroTime"
-                    android:text="(5/20-5/27"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
+                >
 
-                    android:gravity="right"
-                    />
-            </LinearLayout>
-            <android.support.v7.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="11"
-                android:id="@+id/nextWeekFreeRecyclerview">
 
-            </android.support.v7.widget.RecyclerView>0
+            </com.example.dllo.lolproject.fragments.vediofragments.herolist.MyRecyclerView>
+            </ScrollView>
+
+
         </LinearLayout>
 
-    </ScrollView>
 
 
-</LinearLayout>
+

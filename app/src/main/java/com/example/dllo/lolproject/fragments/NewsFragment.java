@@ -1,5 +1,6 @@
 package com.example.dllo.lolproject.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
@@ -10,15 +11,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.VolleyError;
+import com.example.dllo.lolproject.NetDataAdress;
 import com.example.dllo.lolproject.adapters.AdapterForNews;
 import com.example.dllo.lolproject.adapters.AdapterForNewsPicture;
+import com.example.dllo.lolproject.bean.NewsPictureBean;
 import com.example.dllo.lolproject.fragments.newsfragments.GameMatchNewsFragment;
 import com.example.dllo.lolproject.fragments.newsfragments.HappyNewsFragment;
 import com.example.dllo.lolproject.fragments.newsfragments.NewNewsFragment;
 import com.example.dllo.lolproject.fragments.newsfragments.ReportNewsFragment;
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.interfaces.ForMore;
+import com.example.dllo.lolproject.lazyman.VolleyForMore;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by dllo on 16/5/19.
@@ -33,15 +40,10 @@ public class NewsFragment extends Fragment {
     //声明新闻下各个fragment的集合
     private ArrayList fragmentArraylist;
     //声明驱动pictures的集合
-    private ArrayList<Integer> data;
+
     //声明驱动图片转动的适配器
     private AdapterForNewsPicture adapterForNewsPicture;
-    //声明与轮播图相关的计时器
-    private CountDownTimer timer;
-    //声明信使
-    public android.os.Handler handler;
-    //声明结果变量(获取网络数据)
-    private String result;
+
 
     @Nullable
     @Override
@@ -55,7 +57,7 @@ public class NewsFragment extends Fragment {
         newsPicturesViewpager = (ViewPager) view.findViewById(R.id.newsPicturesViewpager);
         //实例化适配器
         adapterForNews = new AdapterForNews(getChildFragmentManager());
-
+        adapterForNewsPicture = new AdapterForNewsPicture(getContext());
         //实例化fragment集合
         fragmentArraylist = new ArrayList();
 
@@ -70,22 +72,41 @@ public class NewsFragment extends Fragment {
         newsViewpager.setAdapter(adapterForNews);
         //将tablayout与滑动页面进行绑定
         tabLayoutForNews.setupWithViewPager(newsViewpager);
+        int color = getResources().getColor(R.color.mycolor);
+        tabLayoutForNews.setTabTextColors(Color.WHITE,color);
+
+        int color2 = getResources().getColor(R.color.seekcolor);
+       tabLayoutForNews.setSelectedTabIndicatorColor(color2);
+
+
 
 
         //实例化pictures的集合
-        data = new ArrayList<>();
-        data.add(R.mipmap.community1);
-        data.add(R.mipmap.community2);
-        data.add(R.mipmap.community3);
-        data.add(R.mipmap.ic_launcher);
+
+       VolleyForMore volleyForMore=new VolleyForMore();
+        volleyForMore.getDataForMore(NetDataAdress.NewsPictureAdress, NewsPictureBean.class, new ForMore<NewsPictureBean>() {
+            @Override
+            public void onSuccess(NewsPictureBean newsPictureBean) {
+
+                List<NewsPictureBean.DataBean>dataForAdress=newsPictureBean.getData();
+                adapterForNewsPicture.setData(dataForAdress);
+
+                newsPicturesViewpager.setAdapter(adapterForNewsPicture);
 
 
-        //想适配器中增加集合
-        adapterForNewsPicture = new AdapterForNewsPicture(getContext());
+            }
 
-        adapterForNewsPicture.setData(data);
+            @Override
+            public void onFailed(VolleyError error) {
 
-        newsPicturesViewpager.setAdapter(adapterForNewsPicture);
+            }
+        });
+
+
+
+
+
+
 
 
 

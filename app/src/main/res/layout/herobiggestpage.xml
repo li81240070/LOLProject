@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -14,7 +15,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/herolistTitleButtonForLoad"
-            android:background="@mipmap/backbutton"/>
+            android:background="@mipmap/myself"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -28,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/herolistTitleButtonForsearch"
-            android:background="@mipmap/ic_launcher"
+            android:background="#2f323a"
             />
 
 
@@ -39,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.8"
-        android:id="@+id/herolistTablayout">
+        android:id="@+id/herolistTablayout"
+        android:background="#2f323a">
 
 
     </android.support.design.widget.TabLayout>

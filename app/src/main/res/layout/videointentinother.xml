@@ -1,35 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#ececec">
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
             android:background="@mipmap/ic_launcher"
-            android:id="@+id/videoIntentPicture"/>
+            android:id="@+id/videoIntentPicture"
+            android:layout_margin="5dp"/>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="8"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="2dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:id="@+id/videoIntentName"
-                android:text="联盟小技巧"/>
+                android:text="联盟小技巧"
+                android:textSize="13sp"
+                android:textColor="#2b2b2b"
+                android:layout_marginTop="3dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:id="@+id/videoIntentDesc"
-                android:text="掌游宝竭诚出品,LOL各种小技巧"/>
+                android:text="掌游宝竭诚出品,LOL各种小技巧"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"
+                />
 
 
         </LinearLayout>
@@ -40,7 +51,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
-        android:text="专辑列表"/>
+        android:text="专辑列表"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:textColor="#2b2b2b"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a9e9f6"
+        />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"

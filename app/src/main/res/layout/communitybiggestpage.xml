@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/communityTitleButtonForLoad"
-            android:background="@mipmap/backbutton"
+            android:background="@mipmap/myself"
 
 
 
@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/communityTitleButtonForsearch"
-            android:background="@mipmap/ic_launcher"
+            android:background="#2f323a"
             />
 
     </LinearLayout>

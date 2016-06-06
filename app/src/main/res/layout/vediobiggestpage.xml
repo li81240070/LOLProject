@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/vedioTitleButtonForLoad"
-            android:background="@mipmap/backbutton"/>
+            android:background="@mipmap/myself"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/vedioTitleButtonForsearch"
-            android:background="@mipmap/ic_launcher"
+            android:background="@mipmap/mydownload"
             />
 
 
@@ -40,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.8"
-        android:id="@+id/vedioTablayout">
+        android:id="@+id/vedioTablayout"
+        android:background="#2f323a">
 
 
     </android.support.design.widget.TabLayout>
@@ -52,7 +53,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10.2"
-        android:id="@+id/vedioViewpager">
+        android:id="@+id/vedioViewpager"
+        android:background="#ffffff">
 
     </android.support.v4.view.ViewPager>
 

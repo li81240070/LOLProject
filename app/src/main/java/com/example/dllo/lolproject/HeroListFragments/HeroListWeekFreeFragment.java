@@ -1,5 +1,6 @@
 package com.example.dllo.lolproject.heroListfragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -50,6 +51,12 @@ public class HeroListWeekFreeFragment extends Fragment{
 
         herolistWeekfreeForViewpager.setAdapter(adapter);
         herolistWeekfreeForTablayout.setupWithViewPager(herolistWeekfreeForViewpager);
+        int color = getResources().getColor(R.color.mycolor);
+
+        herolistWeekfreeForTablayout.setTabTextColors(Color.BLACK,Color.WHITE);
+        herolistWeekfreeForTablayout.setBackgroundResource(R.drawable.weekfreetablayout);
+
+
 
         return  view;
     }

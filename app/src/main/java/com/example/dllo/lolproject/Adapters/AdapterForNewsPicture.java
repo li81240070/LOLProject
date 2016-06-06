@@ -8,18 +8,30 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.bean.NewsPictureBean;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by dllo on 16/5/20.
  */
 public class AdapterForNewsPicture extends PagerAdapter{
 
-    private ArrayList<Integer> data;
+    private List<NewsPictureBean.DataBean>data;
     private Context context;
-    private ImageView newsAdapterForPicture;
+    private  ImageView imageView;
 
+
+    public AdapterForNewsPicture(Context context) {
+        this.context = context;
+    }
+
+    public void setData(List<NewsPictureBean.DataBean> data) {
+        this.data = data;
+        notifyDataSetChanged();
+    }
 
 
 
@@ -36,43 +48,27 @@ public class AdapterForNewsPicture extends PagerAdapter{
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
-       View view= LayoutInflater.from(context).inflate(R.layout.newsadapterforpicturespage,container,false);
+        View view=LayoutInflater.from(context).inflate(R.layout.newsadapterforpicturespage,container,false);
+        imageView= (ImageView) view.findViewById(R.id.newsAdapterForPictures);
 
-        newsAdapterForPicture= (ImageView) view.findViewById(R.id.newsAdapterForPictures);
 
-        newsAdapterForPicture.setImageResource(data.get(position));
+        Picasso.with(context).load(data.get(position).getPic_ad_url()).into(imageView);
+
+
         container.addView(view);
 
         return view;
-    }
 
-    public AdapterForNewsPicture(ArrayList<Integer> data, Context context) {
-        this.data = data;
-        this.context = context;
-    }
 
-    public void setData(ArrayList<Integer> data) {
-        this.data = data;
+
+
+
 
     }
-
-    public AdapterForNewsPicture(Context context) {
-        this.context = context;
-    }
-
-    public void setNewsAdapterForPicture(ImageView newsAdapterForPicture) {
-        this.newsAdapterForPicture = newsAdapterForPicture;
-    }
-
-
-
-
 
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-
-
 
     }
 }

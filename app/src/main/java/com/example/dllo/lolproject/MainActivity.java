@@ -86,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
         tabLayoutForBigView.getTabAt(2).setIcon(R.drawable.herolistbutton);
         tabLayoutForBigView.getTabAt(3).setIcon(R.drawable.communitybutton);
         tabLayoutForBigView.getTabAt(4).setIcon(R.drawable.morebutton);
+        int color = getResources().getColor(R.color.nonecolor);
+        tabLayoutForBigView.setSelectedTabIndicatorColor(color);
+
 
 
 

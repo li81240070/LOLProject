@@ -3,9 +3,11 @@ package com.example.dllo.lolproject.thesecondflor;
 import android.app.Activity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
@@ -13,6 +15,7 @@ import android.widget.VideoView;
 import com.android.volley.VolleyError;
 import com.example.dllo.lolproject.R;
 import com.example.dllo.lolproject.bean.VideoPlayerAdressBean;
+import com.example.dllo.lolproject.fragments.vediofragments.MyVedioView;
 import com.example.dllo.lolproject.interfaces.ForPlayerAdress;
 import com.example.dllo.lolproject.tools.MyAPP;
 import com.example.dllo.lolproject.tools.VolleyForPlayerAdress;
@@ -25,19 +28,20 @@ import java.util.List;
  * Created by dllo on 16/5/28.
  */
 public class VideoPlayer extends Activity{
-    private VideoView videoviewInVideoPlayer;
+    private MyVedioView videoviewInVideoPlayer;
     private ImageView pictureInVideoPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.videoplayerpage);
 
         Intent intent=getIntent();
 
        String playerUrl=intent.getStringExtra("VideoPlayerUrl");
 
-        pictureInVideoPlayer= (ImageView) findViewById(R.id.pictureInVideoPlayer);
+       // pictureInVideoPlayer= (ImageView) findViewById(R.id.pictureInVideoPlayer);
 
 
 
@@ -49,10 +53,10 @@ public class VideoPlayer extends Activity{
 
                 String adress=videoPlayerAdressBean.getData().getVideo_urls().getSd();
 
-                videoviewInVideoPlayer= (VideoView) findViewById(R.id.videoviewInVideoPlayer);
+                videoviewInVideoPlayer= (MyVedioView) findViewById(R.id.videoviewInVideoPlayer);
 
                 Uri uri=Uri.parse(adress);
-                Picasso.with(MyAPP.context).load(videoPlayerAdressBean.getData().getImage_url()).into(pictureInVideoPlayer);
+               // Picasso.with(MyAPP.context).load(videoPlayerAdressBean.getData().getImage_url()).into(pictureInVideoPlayer);
 
                 videoviewInVideoPlayer.setMediaController(new MediaController(VideoPlayer.this));
                 videoviewInVideoPlayer.setVideoURI(uri);
@@ -75,5 +79,13 @@ public class VideoPlayer extends Activity{
 
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        if(getRequestedOrientation()!= ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
+        super.onResume();
     }
 }

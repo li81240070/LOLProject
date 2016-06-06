@@ -1,5 +1,6 @@
 package com.example.dllo.lolproject.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -14,6 +15,7 @@ import com.example.dllo.lolproject.heroListfragments.HeroListAllHeroFragment;
 import com.example.dllo.lolproject.heroListfragments.HeroListMyHeroFragment;
 import com.example.dllo.lolproject.heroListfragments.HeroListWeekFreeFragment;
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.interfaces.HeroList;
 
 import java.util.ArrayList;
 
@@ -55,6 +57,11 @@ public class HeroListFragment extends Fragment{
         herolistViewpager.setAdapter(adapterForHerolist);
         //将滑动组件与显示内容进行对应
         herolistTablayout.setupWithViewPager(herolistViewpager);
+        int color = getResources().getColor(R.color.mycolor);
+        herolistTablayout.setTabTextColors(Color.WHITE,color);
+
+        int color2 = getResources().getColor(R.color.seekcolor);
+        herolistTablayout.setSelectedTabIndicatorColor(color2);
 
 
 

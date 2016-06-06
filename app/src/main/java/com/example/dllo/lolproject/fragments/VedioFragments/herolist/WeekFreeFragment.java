@@ -2,6 +2,7 @@ package com.example.dllo.lolproject.fragments.vediofragments.herolist;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -30,7 +31,7 @@ import java.util.List;
  * Created by dllo on 16/5/26.
  */
 public class WeekFreeFragment extends Fragment{
-    private RecyclerView thisWeekFreeRecyclerview,nextWeekFreeRecyclerview;
+    private MyRecyclerView thisWeekFreeRecyclerview,nextWeekFreeRecyclerview;
     private AdapterForWeekFree adapter,adapterForNextWeek;
 
 
@@ -43,7 +44,7 @@ public class WeekFreeFragment extends Fragment{
 
 
 
-        thisWeekFreeRecyclerview= (RecyclerView) view.findViewById(R.id.thisWeekFreeRecyclerview);
+        thisWeekFreeRecyclerview= (MyRecyclerView) view.findViewById(R.id.thisWeekFreeRecyclerview);
        // nextWeekFreeRecyclerview= (RecyclerView) view.findViewById(R.id.nextWeekFreeRecyclerview);
 
 
@@ -86,6 +87,7 @@ public class WeekFreeFragment extends Fragment{
                 thisWeekFreeRecyclerview.setAdapter(adapter);
                // nextWeekFreeRecyclerview.setLayoutManager(new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL));
                // nextWeekFreeRecyclerview.setAdapter(adapterForNextWeek);
+
 
             }
 

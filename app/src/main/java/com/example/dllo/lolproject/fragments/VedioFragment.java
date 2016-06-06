@@ -1,5 +1,6 @@
 package com.example.dllo.lolproject.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -57,6 +58,11 @@ public class VedioFragment extends Fragment{
         vedioViewpager.setAdapter(adapterForVedio);
         //将tabalayout与viewpager进行绑定
         vedioTablayout.setupWithViewPager(vedioViewpager);
+        int color = getResources().getColor(R.color.mycolor);
+        vedioTablayout.setTabTextColors(Color.WHITE,color);
+
+        int color2 = getResources().getColor(R.color.seekcolor);
+        vedioTablayout.setSelectedTabIndicatorColor(color2);
 
 
 

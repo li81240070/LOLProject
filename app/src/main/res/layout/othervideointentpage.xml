@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:layout_height="50dp">
 
     <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:id="@+id/imageViewInVideoOther"
+        android:scaleType="fitXY"
+        android:layout_margin="3dp"
         />
     <LinearLayout
         android:layout_width="0dp"
@@ -19,13 +21,17 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:id="@+id/titleInVideoOther"
-            android:text="标题"/>
+            android:text="标题"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:textColor="#2b2b2b"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:id="@+id/descInVideoOther"
-            android:text="内容"/>
+            android:text="内容"
+            android:textSize="8sp"/>
 
 
     </LinearLayout>
