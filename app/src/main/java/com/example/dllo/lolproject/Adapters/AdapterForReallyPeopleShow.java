@@ -1,16 +1,19 @@
 package com.example.dllo.lolproject.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.dllo.lolproject.R;
 import com.example.dllo.lolproject.bean.ReallyPeopleShowBean;
 import com.example.dllo.lolproject.tools.MyAPP;
+import com.example.dllo.lolproject.tools.RoundDrawable;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -64,10 +67,19 @@ public class AdapterForReallyPeopleShow extends BaseAdapter{
         viewHolder.reallyPeopleShowName.setText(data.get(position).getSummoner());
         viewHolder.reallyPeopleShowBB.setText(data.get(position).getDesc());
         viewHolder.reallyPeopleShowTime.setText(data.get(position).getCreated());
-        viewHolder.reallyPeopleShowWhereAndWho.setText(data.get(position).getArea()+data.get(position).getNickname());
+        viewHolder.reallyPeopleShowWhereAndWho.setText(data.get(position).getArea()+":"+data.get(position).getNickname());
         Picasso.with(context).load(data.get(position).getPic_url()).into(viewHolder.reallyPeopleShowShowFace);
-        Picasso.with(context).load(data.get(position).getAvatar()).into(viewHolder.reallyPeopleShowLittleFace);
+        Picasso.with(context).load(data.get(position).getAvatar()).transform(new RoundDrawable()).into(viewHolder.reallyPeopleShowLittleFace);
+        int a= Integer.parseInt(data.get(position).getSex());
 
+        if (a==1){
+
+            viewHolder.reallyPeopleShowSex.setImageResource(R.mipmap.boy);
+
+        }else{
+            viewHolder.reallyPeopleShowSex.setImageResource(R.mipmap.girl);
+
+        }
 
         return convertView;
 
@@ -77,8 +89,9 @@ public class AdapterForReallyPeopleShow extends BaseAdapter{
 
     public class viewHolder{
 
-        ImageView reallyPeopleShowLittleFace,reallyPeopleShowShowFace;
+        ImageView reallyPeopleShowLittleFace,reallyPeopleShowShowFace,reallyPeopleShowSex;
         TextView reallyPeopleShowName,reallyPeopleShowTime,reallyPeopleShowWhereAndWho,reallyPeopleShowBB;
+        LinearLayout reallyPeopleShowBackground;
 
         public viewHolder(View itemView){
             reallyPeopleShowShowFace= (ImageView) itemView.findViewById(R.id.reallyPeopleShowShowFace);
@@ -87,6 +100,8 @@ public class AdapterForReallyPeopleShow extends BaseAdapter{
             reallyPeopleShowTime= (TextView) itemView.findViewById(R.id.reallyPeopleShowTime);
             reallyPeopleShowWhereAndWho= (TextView) itemView.findViewById(R.id.reallyPeopleShowWhereAndWho);
             reallyPeopleShowBB= (TextView) itemView.findViewById(R.id.reallyPeopleShowBB);
+            reallyPeopleShowSex= (ImageView) itemView.findViewById(R.id.reallyPeopleShowSex);
+
 
 
 

@@ -1,14 +1,17 @@
 package com.example.dllo.lolproject.fragments.more10activity;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.dllo.lolproject.R;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -46,7 +49,7 @@ public class AdapterForMore10Music extends BaseAdapter{
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         viewHolder viewHolder1=null;
         if (convertView==null){
@@ -63,7 +66,33 @@ public class AdapterForMore10Music extends BaseAdapter{
         }
 
         viewHolder1.more10Title.setText(data.get(position).getName());
+        viewHolder1.palyMp3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer mp = new MediaPlayer();
+                try {
+                    mp.setDataSource(data.get(position).getPath_url());
+                    mp.prepare();
+                    mp.start();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener(){
 
+                    @Override
+
+                    public void onCompletion(MediaPlayer mp) {
+
+                        mp.release();
+
+                    }
+
+                });
+
+            }
+
+
+        });
 
         return convertView;
 
@@ -79,11 +108,12 @@ public class AdapterForMore10Music extends BaseAdapter{
     public class viewHolder{
 
         TextView more10Title;
+        Button palyMp3;
 
         public viewHolder(View itemView){
 
             more10Title= (TextView) itemView.findViewById(R.id.more10Title);
-
+            palyMp3= (Button) itemView.findViewById(R.id.palyMp3);
 
         }
 

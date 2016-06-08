@@ -14,7 +14,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/more3BackButton"
-            android:background="@mipmap/backbutton"/>
+            android:background="@mipmap/newsback"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/more3Changeaccount"
-            android:background="@mipmap/ic_launcher"
+            android:background="#2f323a"
             />
 
 
@@ -38,18 +38,25 @@
         android:layout_height="0dp"
         android:layout_weight="0.8"
         android:orientation="horizontal"
+        android:background="#2f323a"
         >
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="登场率"
+            android:background="#2f323a"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
             />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="全部"
+            android:background="#2f323a"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
             />
     </LinearLayout>
     <ListView

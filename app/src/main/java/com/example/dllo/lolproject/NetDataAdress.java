@@ -48,6 +48,14 @@ public  class NetDataAdress {
     public final  static  String ColumnAdress="http://lol.zhangyoubao.com/apis/rest/TopicsService/all?page=1&i_=04%3Ae6%3A76%3A88%3A95%3A96&t_=1464834968838&p_=28859&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
     //轮播图地址
     public final  static  String NewsPictureAdress="http://lol.zhangyoubao.com/apis/rest/ItemsService/ads?&i_=EAC1B788-00BC-454A-A9B9-460852CFC011&t_=1438744725&p_=16520&v_=40050303&d_=ios&osv_=8.3&version=0&a_=lol";
+    //精彩评论地址
+    public final  static  String InteringAdress="http://lol.zhangyoubao.com/apis/rest/TopicsService/items?topicid=18&page=1&i_=04%3Ae6%3A76%3A88%3A95%3A96&t_=1465356535023&p_=17414&v_=400801&a_=lol&pkg_=com.anzogame.lol&d_=android&osv_=21&cha=360Martket&u_=23372828&modle_=N1&%20HTTP/1.1";
+
+
+
+
+
+
 
 
 }

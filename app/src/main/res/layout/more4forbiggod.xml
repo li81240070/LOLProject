@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -14,7 +16,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/more4BackButton"
-            android:background="@mipmap/backbutton"/>
+            android:background="@mipmap/newsback"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -28,38 +30,65 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/more4Changeaccount"
-            android:background="@mipmap/ic_launcher"
+            android:background="#2f323a"
             />
 
 
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2b2b2b"/>
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.8"
         android:text="艾欧尼亚"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:background="#2f323a"
+        android:textSize="15sp"
+        android:textColor="#fafafa"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2b2b2b"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.8"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#484848">
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="排名"/>
+            android:text="排名"
+            android:textColor="#5a98ed"
+            android:gravity="center"
+            android:textSize="13sp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="9"
-            android:text="召唤师"/>
+            android:text="召唤师"
+            android:textColor="#5a98ed"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            />
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="段位/胜点"/>
+            android:text="段位/胜点"
+            android:textColor="#5a98ed"
+            android:gravity="center_vertical"
+            android:textSize="13sp"/>
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2b2b2b"/>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#484848"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -12,7 +14,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="排名"
-            android:id="@+id/more4ListviewRank"/>
+            android:id="@+id/more4ListviewRank"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            />
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -26,7 +31,11 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="8"
-                android:id="@+id/more4ListviewName"/>
+                android:id="@+id/more4ListviewName"
+                android:gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:textSize="13sp"
+                android:layout_marginLeft="5dp"/>
 
           </LinearLayout>
         <TextView
@@ -34,7 +43,10 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:text="段位/胜点"
-            android:id="@+id/more4ListviewLevel"/>
+            android:textColor="#dd6629"
+            android:id="@+id/more4ListviewLevel"
+            android:gravity="center_vertical"
+            android:textSize="10sp"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="300dp">
+    android:layout_height="120dp"
+    android:background="#ffffff">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="horizontal">
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp">
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+
 
             android:id="@+id/findFriendPicture"/>
         <LinearLayout
@@ -24,35 +29,47 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+
+
                     android:text="齐天大圣孙悟空"
+                    android:textSize="10sp"
+
+                    android:textColor="#2b2b2b"
                     android:id="@+id/findFriendName"/>
                 <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@mipmap/ic_launcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+
                     android:id="@+id/findFriendSex"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="5"
                     android:text="05-07 22:28"
-                    android:id="@+id/findFriendTime"/>
+                    android:id="@+id/findFriendTime"
+                    android:textSize="10sp"
+                    android:textColor="#131313"
+                    android:gravity="right"
+                    android:layout_marginRight="5dp"
+                     />
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="漩涡鸣人"
+                android:textSize="8sp"
                 android:id="@+id/findFriendWhere"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="战斗力10000"
+                android:textSize="8sp"
                 android:id="@+id/findFriendFight"/>
 
 
@@ -62,24 +79,47 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:text="开黑语音"
+        android:textColor="#2c2c2c"
+        android:textSize="10sp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
         android:id="@+id/findFriendLanguage"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:text="所在城市"
-        android:id="@+id/findFriendCity"/>
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/findFriendCity"
+        android:textColor="#2c2c2c"
+        android:textSize="10sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
         android:text="约战宣言"
-        android:id="@+id/findFriendBB"/>
+        android:id="@+id/findFriendBB"
+        android:textColor="#2c2c2c"
+        android:textSize="10sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="0.5"
+
+       />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2c2c2c"/>
 
 </LinearLayout>

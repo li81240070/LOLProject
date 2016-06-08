@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="200dp">
+    android:layout_height="300dp"
+    android:background="#ffffff"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-        <com.example.dllo.lolproject.tools.RoundDrawable
+        android:layout_weight="0.2"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginRight="5dp">
+        <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -23,45 +28,79 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1">
-                <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                    android:id="@+id/reallyPeopleShowName"
-                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="阿卡丽"
+                        android:id="@+id/reallyPeopleShowName"
+                        android:textSize="10sp"
+                        android:textColor="#2b2b2b"
+
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/reallyPeopleShowSex"
+
+                        android:layout_marginLeft="5dp"/>
+
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:id="@+id/reallyPeopleShowTime"
-                    android:text="今天 11:10"/>
+                    android:text="今天 11:10"
+                    android:gravity="right"
+                    android:textSize="8sp"/>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:id="@+id/reallyPeopleShowWhereAndWho"
-                android:text="召唤师(雷霆守备)萝莉女匪"/>
+                android:text="召唤师(雷霆守备)萝莉女匪"
+                android:textSize="8sp"
+                />
 
         </LinearLayout>
     </LinearLayout>
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+
+        android:layout_gravity="left"
+        android:layout_margin="5dp"
 
         android:id="@+id/reallyPeopleShowShowFace"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.2"
         android:text="发言内容"
-        android:id="@+id/reallyPeopleShowBB"/>
+        android:id="@+id/reallyPeopleShowBB"
+        android:textSize="10sp"
+        android:textColor="#2b2b2b"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2f323a"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:text="给点赞占位"/>
+        android:layout_weight="0.1"
+        android:background="#2f323a"
+       />
 
 
 </LinearLayout>

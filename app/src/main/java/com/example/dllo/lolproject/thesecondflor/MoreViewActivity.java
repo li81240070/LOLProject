@@ -1,6 +1,8 @@
 package com.example.dllo.lolproject.thesecondflor;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -9,12 +11,14 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.example.dllo.lolproject.NetDataAdress;
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.bean.More8SkillsRecyclerviewBean;
 import com.example.dllo.lolproject.fragments.more10activity.AdapterForMore10Music;
 import com.example.dllo.lolproject.fragments.more10activity.More10MusicBean;
 import com.example.dllo.lolproject.fragments.more11activity.AdapterForMore11Wallpaper;
@@ -72,13 +76,14 @@ public class MoreViewActivity extends AppCompatActivity{
     //界面10铃声
     private ListView more10List;
     private AdapterForMore10Music adapter10;
+
     //界面5精彩专栏
     private ListView more5ListView;
     private AdapterForMore5Column adapter5;
     //界面8召唤师技能
     private RecyclerView more8Recyclerview;
     private AdapterForMore8Skills adapter8;
-    private List data8;
+    private List<More8SkillsRecyclerviewBean> data8;
     //界面6S6赛季天赋模拟
     private ViewPager more6ViewPager;
     private TabLayout more6TabLayout;
@@ -91,7 +96,6 @@ public class MoreViewActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 
 
@@ -209,19 +213,24 @@ public class MoreViewActivity extends AppCompatActivity{
                     }
                 });
 
-                more5ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                        Intent intent5=new Intent();
-                        String more5=position+"";
-                        intent5.putExtra("more5",more5);
-                        intent5.setClass(MoreViewActivity.this, More5Intent.class);
-                        startActivity(intent5);
-
-
-                    }
-                });
+//                more5ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                    @Override
+//                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//
+//
+//
+//
+////
+////                        Intent intent5=new Intent();
+////                        String more5=position+"";
+////                        intent5.putExtra("more5",more5);
+////                        intent5.setClass(MoreViewActivity.this, More5Intent.class);
+////                        startActivity(intent5);
+//
+//
+//                    }
+//                });
 
 
 
@@ -239,7 +248,11 @@ public class MoreViewActivity extends AppCompatActivity{
                 adapter6.setFragments(fragmentArrayListForMore6);
                 more6ViewPager.setAdapter(adapter6);
                 more6TabLayout.setupWithViewPager(more6ViewPager);
+                int color = getResources().getColor(R.color.mycolor);
+                more6TabLayout.setTabTextColors(Color.WHITE,color);
 
+                int color2 = getResources().getColor(R.color.seekcolor);
+                more6TabLayout.setSelectedTabIndicatorColor(color2);
 
 
 
@@ -263,25 +276,25 @@ public class MoreViewActivity extends AppCompatActivity{
                 adapter8=new AdapterForMore8Skills(getBaseContext());
                 data8=new ArrayList();
 
-                data8.add(R.mipmap.more81);
-                data8.add(R.mipmap.more82);
-                data8.add(R.mipmap.more83);
-                data8.add(R.mipmap.more84);
-                data8.add(R.mipmap.more85);
-                data8.add(R.mipmap.more86);
-                data8.add(R.mipmap.more87);
-                data8.add(R.mipmap.more88);
-                data8.add(R.mipmap.more89);
-                data8.add(R.mipmap.more810);
-                data8.add(R.mipmap.more811);
-                data8.add(R.mipmap.more812);
-                data8.add(R.mipmap.more813);
-                data8.add(R.mipmap.more814);
-                data8.add(R.mipmap.more815);
+                data8.add(new More8SkillsRecyclerviewBean("屏障",R.mipmap.more81));
+                data8.add(new More8SkillsRecyclerviewBean("净化",R.mipmap.more82));
+                data8.add(new More8SkillsRecyclerviewBean("洞察",R.mipmap.more83));
+                data8.add(new More8SkillsRecyclerviewBean("引燃",R.mipmap.more84));
+                data8.add(new More8SkillsRecyclerviewBean("虚弱",R.mipmap.more85));
+                data8.add(new More8SkillsRecyclerviewBean("闪现",R.mipmap.more86));
+                data8.add(new More8SkillsRecyclerviewBean("幽灵疾步",R.mipmap.more87));
+                data8.add(new More8SkillsRecyclerviewBean("治疗术",R.mipmap.more88));
+                data8.add(new More8SkillsRecyclerviewBean("清晰术",R.mipmap.more89));
+                data8.add(new More8SkillsRecyclerviewBean("卫戍部队",R.mipmap.more810));
+                data8.add(new More8SkillsRecyclerviewBean("护驾!",R.mipmap.more811));
+                data8.add(new More8SkillsRecyclerviewBean("魄罗投掷",R.mipmap.more812));
+                data8.add(new More8SkillsRecyclerviewBean("惩戒",R.mipmap.more813));
+                data8.add(new More8SkillsRecyclerviewBean("标记",R.mipmap.more814));
+                data8.add(new More8SkillsRecyclerviewBean("传送",R.mipmap.more815));
 
 
                 adapter8.setData(data8);
-                more8Recyclerview.setLayoutManager(new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.HORIZONTAL));
+                more8Recyclerview.setLayoutManager(new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL));
                 more8Recyclerview.setAdapter(adapter8);
 
 
@@ -299,6 +312,8 @@ public class MoreViewActivity extends AppCompatActivity{
                 setContentView(R.layout.more10formusic);
                 more10List= (ListView) findViewById(R.id.more10List);
                 adapter10=new AdapterForMore10Music(getBaseContext());
+
+
 
                 VolleyForMore volleyForMore10=new VolleyForMore();
                 volleyForMore10.getDataForMore(NetDataAdress.MuscicAdress, More10MusicBean.class, new ForMore<More10MusicBean>() {

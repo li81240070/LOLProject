@@ -64,7 +64,7 @@ private List<ShowHowToPlayBean.DataBean>data;
 
 
         }
-        viewHolder.showHowToPlayListviewName.setText(data.get(position).getSummoner());
+        viewHolder.showHowToPlayListviewName.setText("发布者:"+data.get(position).getSummoner());
         viewHolder.showHowToPlayListviewTitle.setText(data.get(position).getTitle());
         viewHolder.showHowToPlayListviewStyle.setText(data.get(position).getMap());
         viewHolder.showHowToPlayListviewWho.setText(data.get(position).getArea());

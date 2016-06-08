@@ -92,91 +92,91 @@ public class More6Ferocious1Fragment extends Fragment implements View.OnClickLis
         switch (v.getId()){
 
             case R.id.more6imageView01:
-                if (a1<6){
+                if (a1<5){
                                a1++;
 
                 MoreImageView1.setText(a1+"/5");}
 
                 break;
             case R.id.more6imageView202:
-                if (a2<6){
+                if (a2<5){
                 a2++;
 
                 MoreImageView2.setText(a2+"/5");}
 
                 break;
             case R.id.more6imageView303:
-                if (a3<6){
+                if (a3<5){
                 a3++;
 
                 MoreImageView3.setText(a3+"/5");}
 
                 break;
             case R.id.more6imageView704:
-                if (a4<6){
+                if (a4<5){
                 a4++;
 
                 MoreImageView4.setText(a4+"/5");}
 
                 break;
             case R.id.more6imageView405:
-                if (a5<6){
+                if (a5<5){
                 a5++;
 
                 MoreImageView5.setText(a5+"/5");}
 
                 break;
             case R.id.more6imageView506:
-                if (a6<6){
+                if (a6<5){
                 a6++;
 
                 MoreImageView6.setText(a6+"/5");}
 
                 break;
             case R.id.more6imageView607:
-                if (a7<6){
+                if (a7<5){
                 a7++;
 
                 MoreImageView7.setText(a7+"/5");}
 
                 break;
             case R.id.more6imageView808:
-                if (a8<6){
+                if (a8<5){
                 a8++;
 
                 MoreImageView8.setText(a8+"/5");}
 
                 break;
             case R.id.more6imageView909:
-                if (a9<6){
+                if (a9<5){
                 a9++;
 
                 MoreImageView9.setText(a9+"/5");}
 
                 break;
             case R.id.more6imageView1010:
-                if (a10<6){
+                if (a10<5){
                 a10++;
 
                 MoreImageView10.setText(a10+"/5");}
 
                 break;
             case R.id.more6imageView1111:
-                if (a11<6){
+                if (a11<5){
                 a11++;
 
                 MoreImageView11.setText(a11+"/5");}
 
                 break;
             case R.id.more6imageView12:
-                if (a12<6){
+                if (a12<5){
                 a12++;
 
                 MoreImageView12.setText(a12+"/5");}
 
                 break;
             case R.id.more6imageView13:
-                if (a13<6){
+                if (a13<5){
                 a13++;
 
                 MoreImageView13.setText(a13+"/5");}
@@ -184,7 +184,7 @@ public class More6Ferocious1Fragment extends Fragment implements View.OnClickLis
                 break;
 
             case R.id.more6imageView14:
-                if (a14<6){
+                if (a14<5){
                 a14++;
 
                 MoreImageView14.setText(a14+"/5");}

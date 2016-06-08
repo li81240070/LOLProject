@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="80dp"
+    android:background="#2f323a"
+    >
     <!--排名-->
     <TextView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:id="@+id/more3Rank"/>
+        android:id="@+id/more3Rank"
+        android:gravity="center"
+        android:textColor="#ffffff"/>
     <!--头像-->
     <ImageView
         android:layout_width="0dp"
@@ -24,7 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:id="@+id/more3HeroName"/>
+            android:id="@+id/more3HeroName"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -35,14 +41,17 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="登场率"/>
+                android:text="登场率"
+                android:layout_margin="5dp"
+                android:textColor="#ffffff"/>
             <!--登场率显示条-->
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="140dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:background="#8fc85d"
-                android:id="@+id/more3LoadPicture"/>
+
+                android:background="#0bc7f8"
+                android:id="@+id/more3LoadPicture"
+                android:layout_margin="5dp"/>
 
 
         </LinearLayout>
@@ -56,14 +65,17 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="胜率"/>
+                android:text="胜率"
+                android:layout_margin="5dp"
+                android:textColor="#ffffff"/>
             <!--胜率显示条-->
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="140dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+
                 android:background="#8fc85d"
-                android:id="@+id/more3VictoryPicture"/>
+                android:id="@+id/more3VictoryPicture"
+                android:layout_margin="5dp"/>
 
 
         </LinearLayout>
@@ -87,13 +99,15 @@
             android:layout_weight="1"
             android:text="50%"
             android:id="@+id/more3LoadNum"
+            android:textColor="#ffffff"
           />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="50%"
-            android:id="@+id/more3VictoryNum"/>
+            android:id="@+id/more3VictoryNum"
+            android:textColor="#ffffff"/>
 
 
 

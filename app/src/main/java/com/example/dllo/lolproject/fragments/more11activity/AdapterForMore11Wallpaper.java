@@ -1,6 +1,7 @@
 package com.example.dllo.lolproject.fragments.more11activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.fragments.more10activity.More10MusicIntnet;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -42,11 +44,19 @@ public class AdapterForMore11Wallpaper extends RecyclerView.Adapter<AdapterForMo
     }
 
     @Override
-    public void onBindViewHolder(myViewHolder holder, int position) {
+    public void onBindViewHolder(myViewHolder holder, final int position) {
 
         Picasso.with(context).load(data.get(position).getPic_thumb_url()).into(holder.more11RecyclerviewPicture);
-
-
+        holder.more11RecyclerviewPicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent  intent=new Intent();
+                intent.putExtra("picturedata",data.get(position).getPic_url()+"");
+                intent.setClass(context, More10MusicIntnet.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+            }
+        });
 
     }
 

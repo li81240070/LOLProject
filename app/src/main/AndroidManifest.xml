@@ -23,13 +23,15 @@
         </activity>
         <activity android:name=".thesecondflor.WebviewForNews"/>
         <activity android:name=".thesecondflor.other"/>
-        <activity android:name=".thesecondflor.VideoPlayer"/>
+        <activity android:name=".thesecondflor.VideoPlayer"
+            />
         <activity android:name=".thesecondflor.ReallyPeopleShowActivity"/>
         <activity android:name=".thesecondflor.ShowHowToPlayActivity"/>
         <activity android:name=".thesecondflor.FindFriendActivity"/>
         <activity android:name=".thesecondflor.MoreViewActivity"/>
         <activity android:name=".fragments.more5activity.More5Intent"/>
         <activity android:name=".fragments.more8activity.More8SkillsDetails"/>
+        <activity android:name=".fragments.more10activity.More10MusicIntnet"/>
     </application>
 
 </manifest>

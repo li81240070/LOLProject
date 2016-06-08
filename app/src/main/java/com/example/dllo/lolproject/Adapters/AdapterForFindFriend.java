@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.dllo.lolproject.R;
 import com.example.dllo.lolproject.bean.FindFriendBean;
 import com.example.dllo.lolproject.interfaces.FindFriend;
+import com.example.dllo.lolproject.tools.RoundDrawable;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -63,14 +64,23 @@ public class AdapterForFindFriend extends BaseAdapter{
 
 
         }
-        viewHolder.findFriendBB.setText(data.get(position).getSlogan());
+        viewHolder.findFriendBB.setText("约战宣言:"+data.get(position).getSlogan());
         viewHolder.findFriendName.setText(data.get(position).getSummoner());
         viewHolder.findFriendTime.setText(data.get(position).getCreated());
         viewHolder.findFriendWhere.setText(data.get(position).getArea());
-        viewHolder.findFriendFight.setText(data.get(position).getZdl());
-        viewHolder.findFriendLanguage.setText(data.get(position).getEnable_voice());
-        viewHolder.findFriendCity.setText(data.get(position).getCity());
-        Picasso.with(context).load(data.get(position).getAvatar()).into(viewHolder.findFriendPicture);
+        viewHolder.findFriendFight.setText("战斗力:"+data.get(position).getZdl());
+        viewHolder.findFriendLanguage.setText("开黑语音:"+data.get(position).getEnable_voice());
+        viewHolder.findFriendCity.setText("所在城市:"+data.get(position).getCity());
+        Picasso.with(context).load(data.get(position).getAvatar()).transform(new RoundDrawable()).into(viewHolder.findFriendPicture);
+        int a= Integer.parseInt(data.get(position).getSex());
+
+            if (a==1){
+                viewHolder.findFriendSex.setImageResource(R.mipmap.boy);
+
+            }else{
+                viewHolder.findFriendSex.setImageResource(R.mipmap.girl);
+            }
+
 
         return convertView;
 

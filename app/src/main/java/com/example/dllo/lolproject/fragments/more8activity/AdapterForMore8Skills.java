@@ -8,8 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.dllo.lolproject.R;
+import com.example.dllo.lolproject.bean.More8SkillsRecyclerviewBean;
 import com.example.dllo.lolproject.thesecondflor.MoreViewActivity;
 import com.example.dllo.lolproject.tools.MyAPP;
 
@@ -21,7 +23,7 @@ import java.util.List;
 public class AdapterForMore8Skills extends RecyclerView.Adapter<AdapterForMore8Skills.myViewHolder>{
 
     private Context context;
-    private List<Integer> data;
+    private List<More8SkillsRecyclerviewBean> data;
 
 
     public AdapterForMore8Skills(Context context) {
@@ -47,7 +49,8 @@ public class AdapterForMore8Skills extends RecyclerView.Adapter<AdapterForMore8S
 
     @Override
     public void onBindViewHolder(myViewHolder holder, final int position) {
-        holder.more8SkillsRecyclerviewPicture.setImageResource(data.get(position));
+        holder.more8SkillsRecyclerviewPicture.setImageResource(data.get(position).getPicture());
+        holder.more8SkillsRecyclerviewName.setText(data.get(position).getName());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,13 +77,14 @@ public class AdapterForMore8Skills extends RecyclerView.Adapter<AdapterForMore8S
     class myViewHolder extends RecyclerView.ViewHolder{
 
     ImageView more8SkillsRecyclerviewPicture;
+        TextView more8SkillsRecyclerviewName;
 
 
     public myViewHolder(View itemView) {
         super(itemView);
 
         more8SkillsRecyclerviewPicture= (ImageView) itemView.findViewById(R.id.more8SkillsRecyclerviewPicture);
-
+        more8SkillsRecyclerviewName= (TextView) itemView.findViewById(R.id.more8SkillsRecyclerviewName);
 
 
     }
