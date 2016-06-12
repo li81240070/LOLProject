@@ -32,6 +32,8 @@
         <activity android:name=".fragments.more5activity.More5Intent"/>
         <activity android:name=".fragments.more8activity.More8SkillsDetails"/>
         <activity android:name=".fragments.more10activity.More10MusicIntnet"/>
+        <activity android:name=".fragments.more12activity.More12Intent"/>
+        <activity android:name=".fragments.more12activity.More12NevolClass"/>
     </application>
 
 </manifest>

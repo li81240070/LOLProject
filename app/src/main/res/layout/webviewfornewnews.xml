@@ -50,7 +50,8 @@
         android:layout_weight="0.8"
         android:orientation="horizontal"
 
-        android:background="#ececec">
+        android:background="#ececec"
+        >
 
         <TextView
             android:layout_width="0dp"
@@ -58,6 +59,8 @@
             android:layout_weight="2.5"
             android:id="@+id/writeSomethingInWebview"
             android:text="写点评论"
+            android:textSize="15sp"
+            android:textColor="#2b2b2b"
             android:background="#ececec"
             android:gravity="center"/>
         <ImageView

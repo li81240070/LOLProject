@@ -14,7 +14,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
-            android:background="@mipmap/ic_launcher"
+            android:scaleType="fitXY"
+
             android:id="@+id/videoIntentPicture"
             android:layout_margin="5dp"/>
         <LinearLayout

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffffff">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -14,7 +15,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/more13BackButton"
-            android:background="@mipmap/backbutton"/>
+            android:background="@mipmap/newsback"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -38,24 +39,42 @@
         android:layout_height="0dp"
         android:layout_weight="0.8"
         android:orientation="horizontal"
+        android:background="#ffffff"
         >
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="地址管理"/>
+            android:text="地址管理"
+            android:textSize="10sp"
+            android:background="#ffffff"/>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#fafafa"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="我的兑换"/>
+            android:text="我的兑换"
+            android:textSize="10sp"
+            android:background="#ffffff"/>
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#fafafa"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.8"
         android:text="我的掌豆:35"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textSize="10sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#fafafa"/>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"

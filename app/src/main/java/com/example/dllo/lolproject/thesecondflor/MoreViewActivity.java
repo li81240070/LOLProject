@@ -122,6 +122,11 @@ public class MoreViewActivity extends AppCompatActivity{
                 adapter.setFragments(fragmentArrayList);
                 more2ViewPager.setAdapter(adapter);
                 more2Tablayout.setupWithViewPager(more2ViewPager);
+                int color22 = getResources().getColor(R.color.mycolor);
+                more2Tablayout.setTabTextColors(Color.WHITE,color22);
+
+                int color222 = getResources().getColor(R.color.seekcolor);
+                more2Tablayout.setSelectedTabIndicatorColor(color222);
 
 
 
